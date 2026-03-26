@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Southside Agency | Premium Brand & PR Mastery</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1f2937',
+                        accent: '#c56a2d',
+                        leaf: '#4f6f52',
+                        surface: '#f7f2e8',
+                        sand: '#e8dfcf',
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --organic-blur: 14px;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background:
+                radial-gradient(circle at 5% 0%, rgba(197, 106, 45, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 90% 15%, rgba(79, 111, 82, 0.16) 0%, transparent 40%),
+                linear-gradient(180deg, #f9f4ea 0%, #f4efe3 100%);
+        }
+        h1, h2, h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            letter-spacing: 0.01em;
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #c56a2d, #e09e63);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .grain {
+            position: relative;
+        }
+        .grain::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.08;
+            background-image: radial-gradient(#1f2937 0.45px, transparent 0.45px);
+            background-size: 5px 5px;
+        }
+        .organic-card {
+            border-radius: 24px;
+            border: 1px solid rgba(31, 41, 55, 0.08);
+            box-shadow: 0 14px 30px rgba(28, 26, 24, 0.08);
+            -webkit-backdrop-filter: blur(var(--organic-blur));
+            backdrop-filter: blur(var(--organic-blur));
+        }
+        .founder-shot {
+            border-radius: 22px;
+            border: 1px solid rgba(255, 255, 255, 0.24);
+            box-shadow: 0 20px 44px rgba(20, 20, 20, 0.3);
+            object-fit: cover;
+        }
+        .image-chip {
+            transform: rotate(var(--chip-rotate));
+        }
+        .chip-left {
+            --chip-rotate: -8deg;
+        }
+        .chip-right {
+            --chip-rotate: 10deg;
+        }
+        .chip-bottom {
+            --chip-rotate: 6deg;
+        }
+        .bar-40 {
+            height: 40%;
+        }
+        .bar-60 {
+            height: 60%;
+        }
+        .bar-70 {
+            height: 70%;
+        }
+        .bar-80 {
+            height: 80%;
+        }
+        .bar-100 {
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="text-gray-800 antialiased">
+
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="font-extrabold text-2xl tracking-tighter text-primary">SOUTHSIDE<span class="text-accent">.AGENCY</span></span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="#the-founder" class="text-gray-600 hover:text-primary font-semibold transition">The Founder</a>
+                    <a href="#services" class="text-gray-600 hover:text-primary font-semibold transition">Services</a>
+                    <a href="#tech" class="text-gray-600 hover:text-primary font-semibold transition">Technology</a>
+                    <a href="#document" class="text-gray-600 hover:text-primary font-semibold transition">Document</a>
+                    <a href="#contact" class="bg-primary hover:bg-slate-800 text-white px-6 py-2.5 rounded-full font-bold transition shadow-md">Work With Us</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative bg-primary text-white pt-32 pb-20 lg:pt-40 lg:pb-32 overflow-hidden grain">
+        <div class="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(197,106,45,0.32),transparent_38%),radial-gradient(circle_at_85%_10%,rgba(79,111,82,0.26),transparent_33%),linear-gradient(135deg,#1f2937,#111827)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <span class="inline-block py-1.5 px-4 rounded-full bg-white/10 text-accent font-bold text-sm mb-6 border border-white/20 tracking-wide uppercase backdrop-blur-sm">
+                        The Creator-Led Agency
+                    </span>
+                    <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight mb-6 leading-tight">
+                        Command Attention.<br>
+                        <span class="gradient-text">Dominate Your Market.</span>
+                    </h1>
+                    <p class="mt-4 text-xl text-gray-300 mb-10 leading-relaxed max-w-lg">
+                        We build, scale, and protect digital empires for public figures, businesses, and visionary leaders using the exact playbook that built one of the region's most engaged communities.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#contact" class="text-center bg-accent hover:bg-yellow-400 text-primary px-8 py-4 rounded-full font-bold text-lg transition shadow-[0_0_20px_rgba(234,179,8,0.4)]">
+                            Apply for Partnership
+                        </a>
+                        <a href="#the-founder" class="text-center bg-white/10 hover:bg-white/20 border border-white/20 text-white px-8 py-4 rounded-full font-bold text-lg transition backdrop-blur-sm">
+                            See Our Secret Weapon
+                        </a>
+                    </div>
+                </div>
+                <div class="relative hidden lg:block">
+                    <div class="absolute -top-10 -right-8 h-44 w-44 rounded-full bg-accent/30 blur-3xl"></div>
+                    <div class="absolute -bottom-6 -left-10 h-36 w-36 rounded-full bg-leaf/30 blur-3xl"></div>
+                    <div class="relative p-10 bg-white/10 organic-card min-h-[460px] flex flex-col justify-between">
+                        <div>
+                            <p class="text-xs tracking-[0.2em] uppercase text-accent font-bold">Campaign Readiness</p>
+                            <h3 class="text-4xl font-extrabold text-white mt-3 leading-tight">Founder-Led Strategy.<br>Constituency-Level Execution.</h3>
+                            <p class="text-gray-300 mt-4 text-lg leading-relaxed">Built to win attention daily with same-day content, regional narrative control, and an election-ready digital communication system.</p>
+                        </div>
+                        <div class="grid grid-cols-3 gap-3">
+                            <div class="rounded-xl bg-white/10 border border-white/20 p-4 text-center">
+                                <p class="text-accent text-2xl font-extrabold">4</p>
+                                <p class="text-xs uppercase tracking-wider text-gray-300">Major Platforms</p>
+                            </div>
+                            <div class="rounded-xl bg-white/10 border border-white/20 p-4 text-center">
+                                <p class="text-accent text-2xl font-extrabold">24/7</p>
+                                <p class="text-xs uppercase tracking-wider text-gray-300">Narrative Watch</p>
+                            </div>
+                            <div class="rounded-xl bg-white/10 border border-white/20 p-4 text-center">
+                                <p class="text-accent text-2xl font-extrabold">1 Year</p>
+                                <p class="text-xs uppercase tracking-wider text-gray-300">Managed Plan</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="the-founder" class="py-24 bg-[linear-gradient(to_bottom,#fffaf0,#f6f0e4)] relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-primary rounded-3xl overflow-hidden shadow-2xl grain">
+                <div class="grid grid-cols-1 md:grid-cols-2">
+                    <div class="p-12 md:p-16 flex flex-col justify-center">
+                        <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-2">The Secret Weapon</h2>
+                        <h3 class="text-3xl md:text-4xl font-extrabold text-white mb-6">You can't fake organic growth. So why hire an agency that has to?</h3>
+                        <p class="text-gray-300 text-lg mb-6 leading-relaxed">
+                            Traditional PR firms guess what the audience wants. We dictate it. Founded by the mind behind <strong>Southside Kannadiga</strong>, our agency isn't built on corporate theory—it's built on a proven track record of capturing millions of eyeballs and building deep, loyal communities.
+                        </p>
+                        <p class="text-gray-300 text-lg mb-8 leading-relaxed">
+                            When you partner with us, you aren't just getting an editing team or media buyers. You are getting the direct strategic oversight of a creator who understands the algorithm, cultural nuances, and viral psychology better than anyone else in the market.
+                        </p>
+                        <div>
+                            <a href="https://www.instagram.com/southside__kannadiga" target="_blank" rel="noopener noreferrer" class="inline-flex items-center text-white font-bold hover:text-accent transition group">
+                                View The Founder's Blueprint
+                                <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-slate-800 relative">
+                        <img src="assets/founder-card.jpg" alt="Southside Kannadiga" class="w-full h-full object-cover opacity-90 saturate-105 transition duration-700">
+                        <div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-primary to-transparent">
+                            <div class="flex gap-4">
+                                <div class="bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+                                    <span class="block text-accent font-bold text-xl">100%</span>
+                                    <span class="text-gray-300 text-xs uppercase tracking-wider">Creator Led</span>
+                                </div>
+                                <div class="bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/10">
+                                    <span class="block text-accent font-bold text-xl">24/7</span>
+                                    <span class="text-gray-300 text-xs uppercase tracking-wider">Cultural Relevance</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="h-44 rounded-2xl border border-primary/15 bg-white/80 organic-card flex flex-col justify-center items-center text-center p-5">
+                    <span class="text-xs uppercase tracking-[0.2em] text-leaf font-bold">Audience Growth</span>
+                    <span class="text-primary text-2xl font-extrabold mt-2">District-Wide Reach</span>
+                    <span class="text-gray-500 mt-2 text-sm">Daily publishing with platform-specific formats</span>
+                </div>
+                <div class="h-44 rounded-2xl border border-primary/15 bg-white/80 organic-card flex flex-col justify-center items-center text-center p-5">
+                    <span class="text-xs uppercase tracking-[0.2em] text-leaf font-bold">Trust Layer</span>
+                    <span class="text-primary text-2xl font-extrabold mt-2">PR + Sentiment Watch</span>
+                    <span class="text-gray-500 mt-2 text-sm">Reputation management and crisis response readiness</span>
+                </div>
+                <a href="https://www.instagram.com/southside__kannadiga" target="_blank" rel="noopener noreferrer" class="h-44 rounded-2xl border border-primary/20 bg-white organic-card flex flex-col justify-center items-center text-center p-4 hover:bg-sand/40 transition">
+                    <span class="text-xs uppercase tracking-[0.2em] text-leaf font-bold">More Founder Visuals</span>
+                    <span class="text-primary text-2xl font-extrabold mt-2">Instagram Feed</span>
+                    <span class="text-gray-500 mt-2 text-sm">@southside__kannadiga</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 bg-surface border-t border-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 max-w-3xl mx-auto">
+                <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-2">Services For One Year</h2>
+                <h3 class="text-4xl font-extrabold text-primary">Creative, attractive and trustworthy growth execution for the constituency.</h3>
+                <p class="mt-4 text-gray-600 text-lg">A full-stack media and campaign system designed to grow reach district-wide, build trust, and convert attention into votes.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <div class="bg-white/90 p-8 rounded-2xl shadow-sm border border-sand hover:shadow-xl transition duration-300 organic-card">
+                    <h4 class="text-2xl font-bold text-primary mb-4">Social Reach & Daily Content</h4>
+                    <ul class="space-y-3 text-gray-700 font-medium">
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Manage Facebook, Instagram, Twitter (X), and YouTube to grow district-level audience.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Edits and posting on the same day for fast trend capture.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> One high-quality testimonial video pipeline.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Spread awareness using 3-4 supporting social media accounts.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Continuous PR monitoring and reputation maintenance.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/90 p-8 rounded-2xl shadow-sm border border-sand hover:shadow-xl transition duration-300 organic-card">
+                    <h4 class="text-2xl font-bold text-primary mb-4">Ground Team & Public Presence</h4>
+                    <ul class="space-y-3 text-gray-700 font-medium">
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> One cameraman always available in the constituency (iPhone 16 Pro Max or professional camera).</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Complete detailed website of prior achievements and contribution to the constituency.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Podcasts with reputed YouTubers for credibility and long-form trust building.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Near-election visibility push with local influencers.</li>
+                    </ul>
+                </div>
+
+                <div class="bg-primary text-white p-8 rounded-2xl shadow-sm border border-primary/30 hover:shadow-xl transition duration-300 organic-card">
+                    <h4 class="text-2xl font-bold mb-4">Election Marketing Engine</h4>
+                    <ul class="space-y-3 text-gray-200 font-medium">
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Digital marketing for elections: calls, WhatsApp, and SMS outreach.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Running ads with constituency and voter-segment targeting.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Social listening tools: Meltwater, Brandwatch, Talkwalker.</li>
+                        <li class="flex items-start"><span class="text-accent mr-3">✔</span> Professional growth stack: Meta Business Suite, YouTube Studio, Google Analytics 4, Sprout Social.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-10 bg-white/80 border border-sand rounded-2xl p-6 md:p-8 organic-card">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center md:text-left">
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.18em] text-leaf font-bold">Trust Signal</p>
+                        <p class="text-primary text-xl font-extrabold mt-2">Weekly Growth Reporting</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.18em] text-leaf font-bold">Execution Model</p>
+                        <p class="text-primary text-xl font-extrabold mt-2">Founder-Led + Ground Team</p>
+                    </div>
+                    <div>
+                        <p class="text-xs uppercase tracking-[0.18em] text-leaf font-bold">Campaign Promise</p>
+                        <p class="text-primary text-xl font-extrabold mt-2">Fast, Creative, Credible</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="py-24 bg-primary text-white relative overflow-hidden grain">
+        <div class="absolute inset-0 opacity-20 bg-[radial-gradient(circle_at_20%_10%,rgba(197,106,45,0.2),transparent_35%),radial-gradient(circle_at_80%_90%,rgba(79,111,82,0.3),transparent_35%)]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col lg:flex-row items-center gap-16">
+                <div class="lg:w-1/2">
+                    <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-2">The Architecture</h2>
+                    <h3 class="text-4xl font-extrabold mb-6">Enterprise Tools. <br>Creator Execution.</h3>
+                    <p class="text-gray-300 text-lg mb-8 leading-relaxed">We don't rely on gut feelings. Our strategy is backed by the most advanced digital marketing infrastructure available, ensuring your message lands exactly where it needs to.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                            <h5 class="font-bold text-xl mb-2 flex items-center text-white"><span class="text-accent mr-2">✦</span> Social Media Listening</h5>
+                            <p class="text-gray-400">Track constituency sentiment and local conversation in real time using Meltwater, Brandwatch, and Talkwalker to respond before narratives spread.</p>
+                        </div>
+                        <div class="bg-slate-800/50 p-6 rounded-xl border border-slate-700">
+                            <h5 class="font-bold text-xl mb-2 flex items-center text-white"><span class="text-accent mr-2">✦</span> Precision Analytics</h5>
+                            <p class="text-gray-400">Execution dashboard built on Meta Business Suite, YouTube Studio, Google Analytics 4, and Sprout Social to optimize timing, format, and paid media performance.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 w-full">
+                    <div class="bg-slate-800 p-8 rounded-2xl border border-slate-700 shadow-2xl relative">
+                        <div class="flex space-x-2 mb-6">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="h-4 bg-slate-700 rounded w-3/4"></div>
+                            <div class="h-4 bg-slate-700 rounded w-1/2"></div>
+                            <div class="flex items-end gap-3 pt-6 h-40">
+                                <div class="w-1/6 bg-blue-500/80 rounded-t-sm bar-40"></div>
+                                <div class="w-1/6 bg-blue-500/80 rounded-t-sm bar-70"></div>
+                                <div class="w-1/6 bg-accent rounded-t-sm shadow-[0_0_15px_rgba(234,179,8,0.5)] bar-100"></div>
+                                <div class="w-1/6 bg-blue-500/80 rounded-t-sm bar-60"></div>
+                                <div class="w-1/6 bg-blue-500/80 rounded-t-sm bar-80"></div>
+                            </div>
+                        </div>
+                        <div class="mt-6 text-center text-xs text-gray-500 uppercase tracking-widest font-semibold">Real-time Audience Sentiment Tracking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="document" class="py-24 bg-[linear-gradient(to_bottom,#fffef9,#f8f1e4)] border-t border-sand">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12 max-w-3xl mx-auto">
+                <h2 class="text-accent font-bold tracking-widest uppercase text-sm mb-2">Attached PDF</h2>
+                <h3 class="text-4xl font-extrabold text-primary">Personal Branding Document</h3>
+                <p class="mt-4 text-gray-600 text-lg">The full PDF is embedded below so it can be read directly on this page.</p>
+            </div>
+
+            <div class="bg-white/90 border border-sand rounded-3xl p-4 md:p-6 shadow-xl organic-card">
+                <div class="aspect-[16/10] w-full rounded-2xl overflow-hidden border border-primary/10 bg-white">
+                    <iframe
+                        src="Personal%20Branding%20SK%20(1).pdf#view=FitH"
+                        title="Personal Branding SK PDF"
+                        class="w-full h-full"
+                    ></iframe>
+                </div>
+
+                <div class="mt-6 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-center">
+                    <a
+                        href="Personal%20Branding%20SK%20(1).pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="text-center bg-primary hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-bold transition"
+                    >
+                        Open PDF in New Tab
+                    </a>
+                    <a
+                        href="Personal%20Branding%20SK%20(1).pdf"
+                        download
+                        class="text-center bg-white hover:bg-sand/50 text-primary border border-primary/20 px-6 py-3 rounded-xl font-bold transition"
+                    >
+                        Download PDF
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact" class="bg-white pt-24 pb-12">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-extrabold text-primary mb-4">Ready to build your empire?</h2>
+            <p class="text-gray-600 text-lg mb-10">We only take on a select number of clients per year to ensure maximum dedication. Apply below to see if we are a fit.</p>
+            
+            <div class="bg-surface border border-sand p-10 rounded-3xl max-w-lg mx-auto mb-16 shadow-xl relative overflow-hidden organic-card">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent to-yellow-300"></div>
+                <h3 class="text-2xl font-bold text-primary mb-6">Start the Conversation</h3>
+                <div class="space-y-4 text-left">
+                    <p class="flex items-center justify-center text-gray-700 font-medium">
+                        <span class="bg-white p-2 rounded-full shadow-sm mr-3">📞</span> +91 8197834301
+                    </p>
+                    <p class="flex items-center justify-center text-gray-700 font-medium">
+                        <span class="bg-white p-2 rounded-full shadow-sm mr-3">✉️</span> southsidekannadiga@gmail.com
+                    </p>
+                </div>
+                <button class="w-full mt-8 bg-primary hover:bg-slate-800 text-white font-bold py-4 rounded-xl transition shadow-lg">
+                    Request a Strategy Call
+                </button>
+            </div>
+
+            <p class="text-sm text-gray-500 font-medium">© 2026 The Southside Agency. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
