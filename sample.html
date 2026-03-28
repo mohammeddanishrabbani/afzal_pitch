@@ -355,6 +355,14 @@
                         <track kind="descriptions" src="BMW_20Bitrate.desc.vtt" srclang="en" label="English descriptions">
                         Your browser does not support the video tag.
                     </video>
+                    <iframe
+                        id="campaign-video-iframe"
+                        class="w-full h-full hidden"
+                        src=""
+                        title="Campaign Video"
+                        allow="autoplay; encrypted-media; picture-in-picture"
+                        allowfullscreen
+                    ></iframe>
                 </div>
 
                 <div class="mt-6 flex justify-center">
@@ -441,6 +449,29 @@
         const VIDEO_URL = "https://drive.google.com/file/d/1427z1gUYwLJbHJ3vVpYA436pyIWyCyN6/view?usp=sharing";
         const GOOGLE_DRIVE_FILE_ID = "1427z1gUYwLJbHJ3vVpYA436pyIWyCyN6";
 
+        function extractDriveFileId(url) {
+            if (!url || !url.trim()) {
+                return "";
+            }
+            const match = url.match(/\/file\/d\/([^/]+)/);
+            return match && match[1] ? match[1] : "";
+        }
+
+        function resolveDriveFileId() {
+            if (GOOGLE_DRIVE_FILE_ID.trim()) {
+                return GOOGLE_DRIVE_FILE_ID.trim();
+            }
+            return extractDriveFileId(VIDEO_URL);
+        }
+
+        function drivePreviewUrl(fileId) {
+            return `https://drive.google.com/file/d/${fileId}/preview`;
+        }
+
+        function driveViewUrl(fileId) {
+            return `https://drive.google.com/file/d/${fileId}/view`;
+        }
+
         function resolveVideoUrl() {
             if (VIDEO_URL.trim()) {
                 if (VIDEO_URL.includes("drive.google.com/file/d/")) {
@@ -459,22 +490,35 @@
 
         (function configureCampaignVideo() {
             const url = resolveVideoUrl();
+            const driveFileId = resolveDriveFileId();
             const source = document.getElementById("campaign-video-source");
             const video = document.getElementById("campaign-video");
+            const iframe = document.getElementById("campaign-video-iframe");
             const link = document.getElementById("campaign-video-link");
             const note = document.getElementById("campaign-video-note");
 
-            if (!source || !video || !link || !note) {
+            if (!source || !video || !iframe || !link || !note) {
                 return;
             }
 
-            if (!url) {
+            if (!url && !driveFileId) {
                 note.textContent = "Set VIDEO_URL or GOOGLE_DRIVE_FILE_ID in sample.html to enable playback.";
+                return;
+            }
+
+            if (driveFileId) {
+                iframe.src = drivePreviewUrl(driveFileId);
+                iframe.classList.remove("hidden");
+                video.classList.add("hidden");
+                link.href = VIDEO_URL.trim() || driveViewUrl(driveFileId);
+                link.textContent = "Open Video in Google Drive";
+                note.textContent = "Video is loaded via Google Drive preview embed.";
                 return;
             }
 
             source.src = url;
             link.href = url;
+            link.textContent = "Open Video in New Tab";
             video.load();
             note.textContent = "Video is loaded from external hosting.";
         })();
