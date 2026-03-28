@@ -342,6 +342,7 @@
             <div class="bg-white/90 border border-sand rounded-3xl p-4 md:p-6 shadow-xl organic-card">
                 <div class="aspect-video w-full rounded-2xl overflow-hidden border border-primary/10 bg-black">
                     <video
+                        id="campaign-video"
                         class="w-full h-full object-cover"
                         autoplay
                         controls
@@ -349,7 +350,7 @@
                         muted
                         preload="metadata"
                     >
-                        <source src="BMW_20Bitrate.mp4" type="video/mp4">
+                        <source id="campaign-video-source" src="" type="video/mp4">
                         <track kind="captions" src="BMW_20Bitrate.en.vtt" srclang="en" label="English captions">
                         <track kind="descriptions" src="BMW_20Bitrate.desc.vtt" srclang="en" label="English descriptions">
                         Your browser does not support the video tag.
@@ -358,7 +359,8 @@
 
                 <div class="mt-6 flex justify-center">
                     <a
-                        href="BMW_20Bitrate.mp4"
+                        id="campaign-video-link"
+                        href="#"
                         target="_blank"
                         rel="noopener noreferrer"
                         class="text-center bg-primary hover:bg-slate-800 text-white px-6 py-3 rounded-xl font-bold transition"
@@ -366,6 +368,7 @@
                         Open Video in New Tab
                     </a>
                 </div>
+                <p id="campaign-video-note" class="mt-3 text-center text-sm text-gray-500"></p>
             </div>
         </div>
     </section>
@@ -432,6 +435,50 @@
             <p class="text-sm text-gray-500 font-medium">© 2026 The Southside Agency. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        // Set either VIDEO_URL or GOOGLE_DRIVE_FILE_ID to enable video playback on GitHub Pages.
+        const VIDEO_URL = "https://drive.google.com/file/d/1427z1gUYwLJbHJ3vVpYA436pyIWyCyN6/view?usp=sharing";
+        const GOOGLE_DRIVE_FILE_ID = "1427z1gUYwLJbHJ3vVpYA436pyIWyCyN6";
+
+        function resolveVideoUrl() {
+            if (VIDEO_URL.trim()) {
+                if (VIDEO_URL.includes("drive.google.com/file/d/")) {
+                    const match = VIDEO_URL.match(/\/file\/d\/([^/]+)/);
+                    if (match && match[1]) {
+                        return `https://drive.google.com/uc?export=download&id=${match[1]}`;
+                    }
+                }
+                return VIDEO_URL.trim();
+            }
+            if (GOOGLE_DRIVE_FILE_ID.trim()) {
+                return `https://drive.google.com/uc?export=download&id=${GOOGLE_DRIVE_FILE_ID.trim()}`;
+            }
+            return "";
+        }
+
+        (function configureCampaignVideo() {
+            const url = resolveVideoUrl();
+            const source = document.getElementById("campaign-video-source");
+            const video = document.getElementById("campaign-video");
+            const link = document.getElementById("campaign-video-link");
+            const note = document.getElementById("campaign-video-note");
+
+            if (!source || !video || !link || !note) {
+                return;
+            }
+
+            if (!url) {
+                note.textContent = "Set VIDEO_URL or GOOGLE_DRIVE_FILE_ID in sample.html to enable playback.";
+                return;
+            }
+
+            source.src = url;
+            link.href = url;
+            video.load();
+            note.textContent = "Video is loaded from external hosting.";
+        })();
+    </script>
 
 </body>
 </html>
